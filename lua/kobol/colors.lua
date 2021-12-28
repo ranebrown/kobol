@@ -60,18 +60,8 @@ for k, v in pairs(M.colors) do
     M.hsl_colors[k] = hsl(v)
 end
 
--- M.colors.dark_green = M.hsl_colors.green.darken(75)
--- M.colors.dark_red = M.hsl_colors.red.darken(75)
--- M.colors.dark_blue = M.hsl_colors.blue.darken(75)
-
 if vim.o.background == "light" then
     -- TODO
 end
-
--- local t = lush(function()
---     return {
---         DiffAdd {fg = M.colors.green}
---     }
--- end)
 
 return M
