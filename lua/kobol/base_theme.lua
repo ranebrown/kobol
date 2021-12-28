@@ -65,7 +65,7 @@ local theme = lush(function()
         TabLineFill { fg = c.fg4, bg = c.bg1, gui = "bold" }, -- tab pages line, where there are no labels
         TabLineSel { fg = c.fg4, gui = "bold" }, -- tab pages line, active tab page label
         Title { fg = c.blue, gui = "bold" }, -- titles for output from ":set all", ":autocmd" etc.
-        Visual { bg = c.accent_blue }, -- Visual mode selection
+        Visual { bg = ch.bg5.sa(40) }, -- Visual mode selection
         VisualNOS { Visual }, -- Visual mode selection when vim is "Not Owning the Selection".
         WildMenu { PmenuSel }, -- current match in 'wildmenu' completion
 
