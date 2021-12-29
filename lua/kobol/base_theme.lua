@@ -10,8 +10,9 @@ local theme = lush(function()
     return {
         -- :h highlight-groups
         Normal { fg = c.fg, bg = c.bg }, -- normal text
-        NormalFloat { Normal }, -- Normal text in floating windows.
         NormalNC { Normal }, -- normal text in non-current windows
+        NormalFloat { Normal }, -- Normal text in floating windows.
+        FloatBorder { fg = c.dark_aqua }, -- Floating window border
         Comment { fg = c.base3, gui = "italic" }, -- any comment
         Conceal { fg = c.lilac }, -- placeholder characters substituted for concealed text (see 'conceallevel')
         Cursor { fg = c.fg, gui = "inverse" }, -- character under the cursor
@@ -26,12 +27,12 @@ local theme = lush(function()
         DiffDelete { bg = c.dark_red }, -- diff mode: Deleted line |diff.txt|
         DiffText { bg = c.bg, gui = "inverse" }, -- diff mode: Changed text within a changed line |diff.txt|
         EndOfBuffer {}, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
-        -- TermCursor   { }, -- cursor in a focused terminal
-        -- TermCursorNC { }, -- cursor in an unfocused terminal
+        TermCursor { Cursor }, -- cursor in a focused terminal
+        TermCursorNC { Cursor }, -- cursor in an unfocused terminal
         ErrorMsg { fg = c.red }, -- error messages on the command line
         WarningMsg { fg = c.yellow }, -- warning messages
-        -- VertSplit    { }, -- the column separating vertically split windows
-        -- Folded       { }, -- line used for closed folds
+        VertSplit { fg = c.bg, bg = c.bg1 }, -- the column separating vertically split windows
+        Folded { fg = c.grey_blue, bg = c.fbg }, -- line used for closed folds
         LineNr { fg = c.fg1, bg = c.bg2 }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
         -- LineNrAbove {}, -- Line number for when the 'relativenumber' option is set, above the cursor line.
         -- LineNrBelow {}, -- Line number for when the 'relativenumber' option is set, below the cursor line.
