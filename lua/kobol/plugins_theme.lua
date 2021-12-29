@@ -89,9 +89,36 @@ local plugins = lush(function()
         LightspeedGreyWash { base.Comment },
         LightspeedUnlabeledMatch { fg = c.fg, gui = "bold" },
         LightspeedOneCharMatch { fg = c.yellow, gui = "bold,reverse" },
-        LightspeedUniqueChar {LightspeedUnlabeledMatch},
-        LightspeedPendingOpArea {base.Visual},
+        LightspeedUniqueChar { LightspeedUnlabeledMatch },
+        LightspeedPendingOpArea { base.Visual },
         LightspeedCursor { base.Cursor },
+
+        -- Alpha
+        AlphaShortcut { fg = c.orange, gui = "bold" },
+        AlphaTitle { fg = c.yellow },
+        AlphaFooter { fg = c.fg, gui = "bold,italic" },
+        AlphaIcon { fg = c.blue },
+
+        -- Galaxyline
+        GalaxylineAccent { fg = c.accent_blue, bg = c.bg4 }, -- left side accent bar
+        GalaxylineNormal { fg = c.fg4, bg = c.bg4 }, -- text for left and right sections
+        GalaxylineNormalBold { fg = c.fg4, bg = c.bg4, gui = "bold" }, -- bold text for left and right sections
+        GalaxylineLMSep { fg = c.bg1, bg = c.bg1 }, -- separator between left and middle
+        GalaxylineLRSep { fg = c.bg1, bg = c.bg4 }, -- separator between left/middle or middle/right
+        GalaxylineMiddleNormal { fg = base.Comment.fg, bg = c.bg1 }, -- text for middle section
+        GalaxyLineMiddleError { fg = base.DiagnosticError.fg, bg = c.bg1 }, -- middle section LSP error
+        GalaxyLineMiddleWarn { fg = base.DiagnosticWarn.fg, bg = c.bg1 }, -- middle section LSP warning
+        GalaxyLineMiddleInfo { fg = base.DiagnosticInfo.fg, bg = c.bg1 }, -- middle section LSP information
+        GalaxyLineMiddleHint { fg = base.DiagnosticHint.fg, bg = c.bg1 }, -- middle section LSP hint
+        GalaxyLineLRWarn { fg = c.yellow, bg = c.bg4 }, -- trailing whitespace, mixed indentation
+        GalaxyLinePerc { fg = c.fg4, bg = c.bg1, gui = "bold" }, -- line percentage
+        GalaxylinePercSep { fg = c.bg4, bg = c.bg4 }, -- separator after line percentage
+        GalaxyLineScroll { fg = c.green, bg = c.bg4 }, -- file precentage scroll bar
+        GalaxyLineBarSep { fg = c.blue, bg = c.bg4 }, -- vertical bar separator
+        GalaxylineInactive { fg = c.ifg, bg = c.ibg }, -- inactive window statusline
+        GalaxylineSL { fg = c.fg, bg = c.accent_blue }, -- short line primary color
+        GalaxylineSLSep { fg = c.accent_blue, bg = c.bg1 }, -- short line separator
+        GalaxylineInactiveSep { fg = c.ibg, bg = c.bg1 }, -- inactive window separator
     }
 end)
 

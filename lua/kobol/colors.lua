@@ -47,9 +47,6 @@ M.colors = {
     dark_red = "#45353e",
 
     -- extra fg & bg colors
-    bg_middle = "#17262e", -- statusline middle background
-    bg_lr = "#223642", -- statusline left/right background
-    fge = "#adb5c0", -- statusline text
     ibg = "#233845", -- inactive background
     ifg = "#767c84", -- inactive foreground
 }
