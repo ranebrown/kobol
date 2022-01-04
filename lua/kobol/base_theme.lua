@@ -161,7 +161,7 @@ local theme = lush(function()
         TSConstructor { Special }, -- Constructor calls and definitions: `{}` in Lua, and Java constructors.
         TSError { fg = c.red }, -- Syntax/parser errors. This might highlight large sections of code while the user is typing still incomplete code, use a sensible highlight.
         TSException { Exception }, -- Exception related keywords: `try`, `except`, `finally` in Python.
-        TSField { Identifier, gui = "bold" }, -- Object and struct fields.
+        TSField { fg = c.fg, gui = "bold" }, -- Object and struct fields.
         TSFloat { Float }, -- Floating-point number literals.
         TSFunction { Function }, -- Function calls and definitions.
         TSFuncBuiltin { Special }, -- Built-in functions: `print` in Lua.
