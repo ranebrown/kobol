@@ -161,7 +161,7 @@ local theme = lush(function()
         TSConstructor { Special }, -- Constructor calls and definitions: `{}` in Lua, and Java constructors.
         TSError { fg = c.red }, -- Syntax/parser errors. This might highlight large sections of code while the user is typing still incomplete code, use a sensible highlight.
         TSException { Exception }, -- Exception related keywords: `try`, `except`, `finally` in Python.
-        TSField { fg = c.fg }, -- Object and struct fields.
+        TSField { Identifier, gui = "bold" }, -- Object and struct fields.
         TSFloat { Float }, -- Floating-point number literals.
         TSFunction { Function }, -- Function calls and definitions.
         TSFuncBuiltin { Special }, -- Built-in functions: `print` in Lua.
@@ -197,7 +197,7 @@ local theme = lush(function()
         TSUnderline { Underlined }, -- Text to be represented with an underline.
         TSStrike { fg = c.fg, gui = "strikethrough" }, -- Strikethrough text.
         TSTitle { Title }, -- Text that is part of a title.
-        TSLiteral { fg = c.yellow }, -- Literal or verbatim text.
+        TSLiteral { String }, -- Literal or verbatim text.
         TSURI { fg = c.blue, gui = "undercurl" }, -- URIs like hyperlinks or email addresses.
         TSMath { fg = c.orange }, -- Math environments like LaTeX's `$ ... $`
         TSTextReference { fg = c.blue }, -- Footnotes, text references, citations, etc.
