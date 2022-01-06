@@ -1,6 +1,7 @@
 local lush = require "lush"
 local base = require "kobol.base_theme"
 local plugins = require "kobol.plugins_theme"
+local languages = require "kobol.languages_theme"
 
 local M = {}
 
@@ -12,7 +13,7 @@ function M.load()
     vim.g.colors_name = "kobol"
     vim.o.termguicolors = true
 
-    local theme = lush.merge { base, plugins }
+    local theme = lush.merge { base, plugins, languages }
     lush(theme)
 end
 
