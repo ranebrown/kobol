@@ -119,6 +119,11 @@ local plugins = lush(function()
         GalaxylineSL { fg = c.fg, bg = c.accent_blue }, -- short line primary color
         GalaxylineSLSep { fg = c.accent_blue, bg = c.bg1 }, -- short line separator
         GalaxylineInactiveSep { fg = c.ibg, bg = c.bg1 }, -- inactive window separator
+
+        -- conflict marker
+        ConflictMarkerOurs { base.DiffAdd },
+        ConflictMarkerTheirs { base.DiffDelete },
+        ConflictMarkerCommonAncestorsHunk { base.DiffChange },
     }
 end)
 
