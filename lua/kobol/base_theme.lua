@@ -203,9 +203,9 @@ local theme = lush(function()
         TSTextReference { fg = c.blue }, -- Footnotes, text references, citations, etc.
         TSEnvironment { fg = c.lilac }, -- Text environments of markup languages.
         TSEnvironmentName { fg = c.blue }, -- Text/string indicating the type of text environment. Like the name of a `\begin` block in LaTeX.
-        TSNote { fg = c.bg, bg = c.lilac }, -- Text representation of an informational note.
-        TSWarning { fg = c.bg, bg = c.yellow }, -- Text representation of a warning note.
-        TSDanger { fg = c.bg, bg = c.red }, -- Text representation of a danger note.
+        TSNote { fg = c.bg, bg = DiagnosticInfo.fg }, -- Text representation of an informational note.
+        TSWarning { fg = c.bg, bg = DiagnosticWarn.fg }, -- Text representation of a warning note.
+        TSDanger { fg = c.bg, bg = DiagnosticError.fg }, -- Text representation of a danger note.
         TSType { Type }, -- Type (and class) definitions and annotations.
         TSTypeBuiltin { Type }, -- Built-in types: `i32` in Rust.
         TSVariable { Normal }, -- Variable names that don't fit into other categories.
