@@ -124,6 +124,12 @@ local plugins = lush(function()
         ConflictMarkerOurs { base.DiffAdd },
         ConflictMarkerTheirs { base.DiffDelete },
         ConflictMarkerCommonAncestorsHunk { base.DiffChange },
+
+        -- hlslens
+        HlSearchNear { fg = c.bg, bg = c.yellow, gui = "bold" },
+        HlSearchLens { base.Folded },
+        HlSearchLensNear { base.Search },
+        HlSearchFloat { HlSearchNear }, -- not sure what this one does
     }
 end)
 

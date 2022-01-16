@@ -39,7 +39,7 @@ local theme = lush(function()
         LineNrBelow { LineNr }, -- Line number for when the 'relativenumber' option is set, below the cursor line.
         FoldColumn { LineNr }, -- 'foldcolumn'
         SignColumn { LineNr }, -- column where |signs| are displayed
-        Search { fg = c.bg, bg = c.yellow, gui = "bold" }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
+        Search { fg = c.fg, bg = ch.blue.da(50) }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
         IncSearch { Search }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
         Substitute { Search }, -- |:substitute| replacement text highlighting
         MatchParen { fg = c.orange, gui = "bold" }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
