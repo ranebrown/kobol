@@ -8,13 +8,13 @@ local base = require "kobol.base_theme"
 ---@diagnostic disable: undefined-global
 local plugins = lush(function()
     return {
-        -- GitGutter
-        GitGutterAdd { fg = c.green },
-        GitGutterChange { fg = c.blue },
-        GitGutterDelete { fg = c.red },
-        GitGutterChangeDelete { fg = c.orange },
+        -- gitsigns: https://github.com/lewis6991/gitsigns.nvim
+        GitSignsAdd { fg = c.green },
+        GitSignsChange { fg = c.blue },
+        GitSignsDelete { fg = c.red },
+        GitSignsChangeDelete { fg = c.orange },
 
-        -- Barbar
+        -- barbar: https://github.com/romgrk/barbar.nvim
         BufferTabpageFill { fg = c.bg4, bg = c.bg1 },
         BufferTabpages { fg = c.bg4, gui = "bold" },
         BufferCurrent { base.TabLineSel },
@@ -27,7 +27,7 @@ local plugins = lush(function()
         BufferInactiveMod { fg = "#65876d", bg = c.bg1, gui = "bold" },
         BufferInactiveSign { BufferTabpageFill },
 
-        -- Cmp
+        -- cmp: https://github.com/hrsh7th/nvim-cmp
         CmpItemAbbr { fg = c.fg4 }, -- The abbr field (portion of word that isn't the match).
         CmpItemAbbrDeprecated { fg = c.fg4, gui = "strikethrough" }, -- The deprecated item's abbr field.
         CmpItemAbbrMatch { fg = c.fg, gui = "bold" }, -- The matched characters highlight.
@@ -56,7 +56,7 @@ local plugins = lush(function()
         CmpItemKindOperator { fg = c.green },
         CmpItemKindSnippet { fg = c.fg4 },
 
-        -- Notify
+        -- notify: https://github.com/rcarriga/nvim-notify
         NotifyERRORBorder { fg = c.red },
         NotifyWARNBorder { fg = c.yellow },
         NotifyINFOBorder { fg = c.blue },
@@ -78,7 +78,7 @@ local plugins = lush(function()
         NotifyDEBUGBody { base.Normal },
         NotifyTRACEBody { base.Normal },
 
-        -- Lightspeed
+        -- lightspeed: https://github.com/ggandor/lightspeed.nvim
         LightspeedLabel { fg = c.yellow, gui = "bold,underline" },
         LightspeedLabelOverlapped { fg = c.yellow, gui = "underline" },
         LightspeedLabelDistant { fg = c.blue, gui = "bold,underline" },
@@ -93,13 +93,13 @@ local plugins = lush(function()
         LightspeedPendingOpArea { base.Visual },
         LightspeedCursor { base.Cursor },
 
-        -- Alpha
+        -- alpha: https://github.com/goolord/alpha-nvim
         AlphaShortcut { fg = c.orange, gui = "bold" },
         AlphaTitle { fg = c.yellow },
         AlphaFooter { fg = c.fg, gui = "bold,italic" },
         AlphaIcon { fg = c.blue },
 
-        -- Galaxyline
+        -- galaxyline: https://github.com/NTBBloodbath/galaxyline.nvim
         GalaxylineAccent { fg = c.accent_blue, bg = c.bg4 }, -- left side accent bar
         GalaxylineNormal { fg = c.fg4, bg = c.bg4 }, -- text for left and right sections
         GalaxylineNormalBold { fg = c.fg4, bg = c.bg4, gui = "bold" }, -- bold text for left and right sections
@@ -120,12 +120,12 @@ local plugins = lush(function()
         GalaxylineSLSep { fg = c.accent_blue, bg = c.bg1 }, -- short line separator
         GalaxylineInactiveSep { fg = c.ibg, bg = c.bg1 }, -- inactive window separator
 
-        -- conflict marker
+        -- conflict-marker: https://github.com/rhysd/conflict-marker.vim
         ConflictMarkerOurs { base.DiffAdd },
         ConflictMarkerTheirs { base.DiffDelete },
         ConflictMarkerCommonAncestorsHunk { base.DiffChange },
 
-        -- hlslens
+        -- hlslens: https://github.com/kevinhwang91/nvim-hlslens
         HlSearchNear { fg = c.bg, bg = c.yellow, gui = "bold" },
         HlSearchLens { base.Folded },
         HlSearchLensNear { base.Search },
